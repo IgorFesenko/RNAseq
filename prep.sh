@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 # prepearing
 
 cd fq_data 
@@ -18,6 +21,17 @@ cd bin # переходим в bin
 # скачиваем и разархивируем Trimmomatic 
 wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.39.zip
 unzip Trimmomatic-0.39.zip
+
+# скачиваем и разархивируем fastqc
+wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.9.zip #скачиваем fastqc
+unzip fastqc_v0.11.9.zip # разархивируем его
+chmod +x ~/bin/FastQC/fastqc # делаем файл fastqc исполняемым (чтобы его можно было запустить как программу)
+
+#скачиваем hisat2
+wget -O hisat2.zip https://cloud.biohpc.swmed.edu/index.php/s/oTtGWbWjaxsQ2Ho/download # скачиваем hisat2
+unzip hisat2.zip # разархивирeем его
+
+
 cd ~ # выходим в домашнюю директорию
 
 
